@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 
 [Serializable]
-public class ActiveProperties
+public struct ActiveProperties
 {
-    public string objectTag = "";
-    public float minDistance = 100;
+    public string objectTag; 
+    public float minDistance; 
 }
