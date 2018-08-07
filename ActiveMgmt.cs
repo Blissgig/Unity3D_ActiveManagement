@@ -51,25 +51,18 @@ public class ActiveMgmt : MonoBehaviour
 
     private void ActivateObjects()
     {
-        try
-        {
-            foreach (ActiveSettings activeItem in activeItems)
-            {
-                float distance = Vector3.Distance(activeItem.position, transform.position);
+    	foreach (ActiveSettings activeItem in activeItems)
+    	{
+	    float distance = Vector3.Distance(activeItem.position, transform.position);
 
-                if (distance < activeItem.minDistance)
-                {
-                    activeItem.activeTransform.gameObject.SetActive(true);
-                }
-                else
-                {
-                    activeItem.activeTransform.gameObject.SetActive(false);
-                }
-            }
-        }
-        catch (System.Exception ex)
-        {
-            Debug.LogError("ActivateObjects ex:" + ex.Message);
+	    if (distance < activeItem.minDistance)
+	    {
+	        activeItem.activeTransform.gameObject.SetActive(true);
+	    }
+	    else
+	    {
+	        activeItem.activeTransform.gameObject.SetActive(false);
+	    }
         }
     }
     
