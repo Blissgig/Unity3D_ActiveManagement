@@ -53,8 +53,6 @@ public class ActiveMgmt : MonoBehaviour
     {
         try
         {
-            List<Transform> newActiveBuildings = new List<Transform>();
-            
             foreach (ActiveSettings activeItem in activeItems)
             {
                 float distance = Vector3.Distance(activeItem.position, transform.position);
